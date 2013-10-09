@@ -48,7 +48,7 @@ class XStatic
     public function enableStaticInterfaces()
     {
         AbstractStaticClass::setContainer($this->container);
-        spl_autoload_register(array($this, 'loadAlias'), true, true);
+        spl_autoload_register(array($this, 'loadAlias'), true, false);
 
         return $this;
     }
